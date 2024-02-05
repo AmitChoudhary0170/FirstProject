@@ -33,6 +33,7 @@ def blog_detail(request, pk):
             )
             comment.save()
             return HttpResponseRedirect(request.path_info)
+        
     comments = Comment.objects.filter(post=post)
     context = {
         "post": post,
